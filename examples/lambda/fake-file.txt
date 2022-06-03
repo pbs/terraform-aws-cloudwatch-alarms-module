@@ -1,0 +1,1 @@
+Lambda is surprisingly strict about the kind of file that needs to be used to create a function.
