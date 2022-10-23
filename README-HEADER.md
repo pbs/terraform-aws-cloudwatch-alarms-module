@@ -1,4 +1,4 @@
-# PBS TF cloudwatch alarms module
+# PBS TF CloudWatch Alarms Module
 
 ## Installation
 
