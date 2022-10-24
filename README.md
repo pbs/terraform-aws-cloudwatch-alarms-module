@@ -6,7 +6,7 @@
 
 ```hcl
 module "cloudwatch-alarms" {
-    source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=x.y.z"
+    source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=0.0.3"
 }
 ```
 
@@ -24,7 +24,7 @@ Integrate this module like so:
 
 ```hcl
 module "cloudwatch-alarms" {
-  source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=x.y.z"
+  source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=0.0.3"
 
   namespace       = "AWS/Lambda"
   lambda_function = aws_lambda_function.lambda.id
@@ -43,7 +43,7 @@ module "cloudwatch-alarms" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`x.y.z`
+`0.0.3`
 
 Note, however that subtrees can be altered as desired within repositories.
 
