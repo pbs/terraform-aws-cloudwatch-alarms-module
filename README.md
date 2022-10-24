@@ -1,4 +1,4 @@
-# PBS TF cloudwatch alarms module
+# PBS TF CloudWatch Alarms Module
 
 ## Installation
 
@@ -6,7 +6,7 @@
 
 ```hcl
 module "cloudwatch-alarms" {
-    source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=0.0.2"
+    source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=x.y.z"
 }
 ```
 
@@ -24,7 +24,7 @@ Integrate this module like so:
 
 ```hcl
 module "cloudwatch-alarms" {
-  source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=0.0.2"
+  source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=x.y.z"
 
   namespace       = "AWS/Lambda"
   lambda_function = aws_lambda_function.lambda.id
@@ -43,7 +43,7 @@ module "cloudwatch-alarms" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`0.0.2`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 

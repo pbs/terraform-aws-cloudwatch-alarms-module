@@ -26,7 +26,7 @@ resource "aws_lambda_function" "lambda" {
 
   source_code_hash = filebase64sha256("fake-zip.zip")
 
-  runtime = "nodejs12.x"
+  runtime = "nodejs16.x"
 }
 
 module "alarm" {
