@@ -4,10 +4,10 @@
 
 ### Using the Repo Source
 
+Use this URL for the source of the module. See the usage examples below for more details.
+
 ```hcl
-module "cloudwatch-alarms" {
-    source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=x.y.z"
-}
+github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -23,7 +23,7 @@ It is an opinionated module that will configure CloudWatch alarms with as little
 Integrate this module like so:
 
 ```hcl
-module "cloudwatch-alarms" {
+module "alarm" {
   source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=x.y.z"
 
   namespace       = "AWS/Lambda"

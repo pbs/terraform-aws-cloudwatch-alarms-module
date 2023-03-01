@@ -4,10 +4,10 @@
 
 ### Using the Repo Source
 
+Use this URL for the source of the module. See the usage examples below for more details.
+
 ```hcl
-module "cloudwatch-alarms" {
-    source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=0.0.4"
-}
+github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -23,8 +23,8 @@ It is an opinionated module that will configure CloudWatch alarms with as little
 Integrate this module like so:
 
 ```hcl
-module "cloudwatch-alarms" {
-  source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=0.0.4"
+module "alarm" {
+  source = "github.com/pbs/terraform-aws-cloudwatch-alarms-module?ref=x.y.z"
 
   namespace       = "AWS/Lambda"
   lambda_function = aws_lambda_function.lambda.id
@@ -43,7 +43,7 @@ module "cloudwatch-alarms" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`0.0.4`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
@@ -59,14 +59,14 @@ Below is automatically generated documentation on this Terraform module using [t
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.1.7 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.2 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.5.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.5.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.35.0 |
 
 ## Modules
 
@@ -77,12 +77,13 @@ No modules.
 | Name | Type |
 |------|------|
 | [aws_cloudwatch_metric_alarm.alarm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_default_tags.common_tags](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/default_tags) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_environment"></a> [environment](#input\_environment) | Environment (sharedtools, dev, staging, prod) | `string` | n/a | yes |
+| <a name="input_environment"></a> [environment](#input\_environment) | Environment (sharedtools, dev, staging, qa, prod) | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | The namespace for the alarm's associated metric. See docs for the list of namespaces. See docs for supported metrics. | `string` | n/a | yes |
 | <a name="input_organization"></a> [organization](#input\_organization) | Organization using this module. Used to prefix tags so that they are easily identified as being from your organization | `string` | n/a | yes |
 | <a name="input_product"></a> [product](#input\_product) | Tag used to group resources according to product | `string` | n/a | yes |
